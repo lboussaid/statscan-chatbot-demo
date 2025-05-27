@@ -18,7 +18,8 @@ query = st.text_input("Ask your question:")
 
 if query and api_key:
     try:
-        llm = ChatOpenAI(model="gpt-4", temperature=0.2, openai_api_key=api_key)
+        llm = ChatOpenAI(model="gpt-4o", temperature=0.2, openai_api_key=api_key)
+
         response = llm.predict(query)
         st.markdown("### ✅ Answer")
         st.write(response)
